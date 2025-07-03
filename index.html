@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project-1</title>
+</head>
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .main{
+          width: 400px;
+          height: 400px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          margin: 100px auto;
+
+    }
+
+    .main div{
+               width: 100px;
+               height: 100px;
+               cursor: pointer;
+    }
+
+    .main #box1{
+        background-color: skyblue;
+    }
+
+     .main #box2{
+        background-color: lavender;
+    }
+    
+     .main #box3{
+        background-color: beige;
+    }
+
+     .main #box4{
+        background-color: paleturquoise;
+    }
+
+</style>
+
+
+<body style="background-color:pink;">
+
+     <h2 id="colorname" style="text-align: center;margin-top: 40px;">click on a box to change the background-color</h2>
+   
+
+<div class="main">
+
+    <div class="btn" id="box1"></div>
+    <div class="btn" id="box2"></div>
+    <div class="btn" id="box3"></div>
+    <div class="btn" id="box4"></div>
+
+
+</div>
+
+<button id="resetBtn" style="display: block; margin:40px auto;border-radius: 2px;">Reset Background</button>
+    
+</body>
+
+
+<script>
+
+     const buttons = document.querySelectorAll('.btn')
+    //  console.log(buttons)
+
+     const body = document.querySelector("body")
+     //  console.log(body) 
+
+    const colorText = document.querySelector('#colorname')
+
+    const reset = document.querySelector('#resetBtn')
+    reset.addEventListener("click", (e) => {
+      body.style.backgroundColor = 'pink';
+      colorText.textContent = ' Pink';
+
+
+    });
+
+
+
+    buttons.forEach((btn) =>{
+        // console.log(btn)
+        btn.addEventListener('click', (e) =>{
+            console.log(e)
+            console.log(e.target)                      // from e.target we get to know where from event comes
+
+            if(e.target.id === 'box1'){
+                body.style.backgroundColor = 'skyblue';
+                colorText.textContent = ' sky blue'
+            }
+
+            if(e.target.id === 'box2'){
+                body.style.backgroundColor = 'lavender';
+                colorText.textContent = ' lavender'
+            }
+            
+            if(e.target.id === 'box3'){
+                body.style.backgroundColor = 'beige';
+                colorText.textContent = ' beige'
+            }
+
+            if(e.target.id === 'box4'){
+                body.style.backgroundColor = 'paleturquoise';
+                colorText.textContent = ' paleturquoise'
+            }
+
+
+
+
+
+        });
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
