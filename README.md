@@ -1,2 +1,15 @@
 # color-box-bg-changer
-A simple HTML, CSS, and JavaScript project where users can change the background color of the page by clicking on colorful boxes. Includes a reset button to return to the default pink background.
+This is a beginner-friendly web project using HTML, CSS, and JavaScript.  
+Users can click on any of the colored boxes to change the background color of the entire page. A "Reset Background" button brings it back to the default pink.
+
+## 🔧 Tech Used
+
+- HTML5  
+- CSS3  
+- JavaScript (Vanilla)
+
+## 💡 Features
+
+- Interactive color change on box click  
+- Smooth and simple UI  
+- Responsive on most screen sizes
